@@ -445,6 +445,16 @@ img {
 .work_img img:hover {
   transform: scale(1.1);
 }
+@media screen and (min-width:320px){
+  .work_img img {
+    height: 13.3125rem;
+    margin-left: 7%;
+    width: 20rem;
+    transition: 1s;
+    cursor: pointer;
+  }
+  
+}
 
 /* Contact */
 

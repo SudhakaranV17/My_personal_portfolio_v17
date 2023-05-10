@@ -29,9 +29,9 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 //Sending feedback to mail
 function SendEmail(){
-      var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
+      var name = document.getElementById("name_form").value;
+    var email = document.getElementById("email_form").value;
+    var message = document.getElementById("form_textarea").value;
     var body = "Name: "+ name + "<br/>" + "Email: "+ email + "<br/>" + "Message: "+ message ;
       
       Email.send({

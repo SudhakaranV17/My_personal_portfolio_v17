@@ -29,17 +29,19 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 //Sending feedback to mail
 function SendEmail(){
+      var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var body = "Name: "+ name + "<br/>" + "Email: "+ email + "<br/>" + "Message: "+ message ;
+      
       Email.send({
-            Host : "smtp.elasticemail.com",
-            port:"2525",
-            Username : "sudhakaranv17@gmail.com",
-            Password : "001485F5E5115CCD0A8204037DDB8758AAAE",
-            To : "sudhakaranv17@gmail.com",
-            From : document.getElementById("email_form").value,
-            Subject : "Feedback From Personal Portfolio",
-            Body : document.getElementById("form_textarea").value,
-        }).then(
-          message => alert("Thanks For Your Feedback.")
-        );
+        SecureToken : "d5d8b0ef-71fe-4715-80b3-b49b970c96c1",
+        To : 'sudhakaranv17@gmail.com',
+        From : "sudhakaranv17@gmail.com",
+        Subject : "Message From Personal Portfolio",
+        Body : body
+    }).then(
+      message => alert(message)
+    );
 }
 //001485F5E5115CCD0A8204037DDB8758AAAE
